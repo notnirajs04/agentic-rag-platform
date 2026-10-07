@@ -1,0 +1,123 @@
+{
+  "metrics": {
+    "num_questions": 6,
+    "route_accuracy": 1.0,
+    "task_success_rate": 1.0
+  },
+  "results": [
+    {
+      "question": "What is Agentic AI?",
+      "expected_route": "rag",
+      "actual_route": "rag",
+      "route_correct": true,
+      "expected_contains": [
+        "plan"
+      ],
+      "answer": "[doc-1] Agentic AI (score=0.306): Agentic AI systems can plan tasks, select tools, execute actions, observe results, and iterate toward a goal. LangGraph can represent these workflows as explicit stateful graphs.\n[doc-5] AI Reliability (score=0.127): Reliable AI applications should validate tool outputs, handle failures, record latency and usage metrics, and test routing and task success separately.",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    },
+    {
+      "question": "What does RAG combine?",
+      "expected_route": "rag",
+      "actual_route": "rag",
+      "route_correct": true,
+      "expected_contains": [
+        "retrieval"
+      ],
+      "answer": "[doc-3] RAG Evaluation (score=0.226): RAG systems should evaluate retrieval quality separately from answer quality. Useful retrieval metrics include hit rate, reciprocal rank, precision, and recall.",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    },
+    {
+      "question": "How many learners are in the database?",
+      "expected_route": "sql",
+      "actual_route": "sql",
+      "route_correct": true,
+      "expected_contains": [
+        "6"
+      ],
+      "answer": "There are 6 learners in the database.",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    },
+    {
+      "question": "How many learners are in Bengaluru?",
+      "expected_route": "sql",
+      "actual_route": "sql",
+      "route_correct": true,
+      "expected_contains": [
+        "3"
+      ],
+      "answer": "There are 3 learners in Bengaluru.",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    },
+    {
+      "question": "What is the average score?",
+      "expected_route": "data",
+      "actual_route": "data",
+      "route_correct": true,
+      "expected_contains": [
+        "87"
+      ],
+      "answer": "Average score: 87.17",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    },
+    {
+      "question": "What is 47 * 6 + 12?",
+      "expected_route": "calculator",
+      "actual_route": "calculator",
+      "route_correct": true,
+      "expected_contains": [
+        "294"
+      ],
+      "answer": "The answer is 294.0.",
+      "task_success": true,
+      "validation": {
+        "passed": true,
+        "grounded": true,
+        "evidence_count": 1,
+        "tool_call_count": 1
+      },
+      "steps": null,
+      "tool_log": []
+    }
+  ]
+}
