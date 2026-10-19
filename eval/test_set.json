@@ -4,5 +4,6 @@
   {"question":"How many learners are in the database?", "expected_route":"sql", "expected_contains":["6"]},
   {"question":"How many learners are in Bengaluru?", "expected_route":"sql", "expected_contains":["3"]},
   {"question":"What is the average score?", "expected_route":"data", "expected_contains":["87"]},
-  {"question":"What is 47 * 6 + 12?", "expected_route":"calculator", "expected_contains":["294"]}
+  {"question":"What is 47 * 6 + 12?", "expected_route":"calculator", "expected_contains":["294"]},
+  {"question":"What is the average score of learners in Bengaluru?", "expected_route":"sql", "expected_contains":["Bengaluru","average","score"]}
 ]

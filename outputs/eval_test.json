@@ -1,0 +1,9 @@
+{
+  "question": "What is the average score of learners in Bengaluru?",
+  "expected_route": "sql",
+  "expected_contains": [
+    "Bengaluru",
+    "average",
+    "score"
+  ]
+}

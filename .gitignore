@@ -5,9 +5,16 @@
 __pycache__/
 *.py[cod]
 *.pyo
+.pytest_cache/
 
 # Environment variables
 .env
+.env.*
+!.env.example
+
+# Node / React
+node_modules/
+frontend/dist/
 
 # IDE
 .vscode/
@@ -15,3 +22,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local backup files
+src/agent_graph.py.bak

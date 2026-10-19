@@ -1,123 +1,378 @@
 {
   "metrics": {
-    "num_questions": 6,
+    "num_questions": 7,
     "route_accuracy": 1.0,
-    "task_success_rate": 1.0
+    "task_success_rate": 1.0,
+    "multi_agent_questions": 1
   },
   "results": [
     {
       "question": "What is Agentic AI?",
       "expected_route": "rag",
       "actual_route": "rag",
+      "final_route": "rag",
       "route_correct": true,
       "expected_contains": [
         "plan"
       ],
       "answer": "[doc-1] Agentic AI (score=0.306): Agentic AI systems can plan tasks, select tools, execute actions, observe results, and iterate toward a goal. LangGraph can represent these workflows as explicit stateful graphs.\n[doc-5] AI Reliability (score=0.127): Reliable AI applications should validate tool outputs, handle failures, record latency and usage metrics, and test routing and task success separately.",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "rag"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "rag": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "rag",
+          "task": "What is Agentic AI?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "rag",
+          "task": "What is Agentic AI?",
+          "result": "[doc-1] Agentic AI (score=0.306): Agentic AI systems can plan tasks, select tools, execute actions, observe results, and iterate toward a goal. LangGraph can represent these workflows as explicit stateful graphs.\n[doc-5] AI Reliability (score=0.127): Reliable AI applications should validate tool outputs, handle failures, record latency and usage metrics, and test routing and task success separately.",
+          "latency_ms": 2.11
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
     },
     {
       "question": "What does RAG combine?",
       "expected_route": "rag",
       "actual_route": "rag",
+      "final_route": "rag",
       "route_correct": true,
       "expected_contains": [
         "retrieval"
       ],
       "answer": "[doc-3] RAG Evaluation (score=0.226): RAG systems should evaluate retrieval quality separately from answer quality. Useful retrieval metrics include hit rate, reciprocal rank, precision, and recall.",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "rag"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "rag": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "rag",
+          "task": "What does RAG combine?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "rag",
+          "task": "What does RAG combine?",
+          "result": "[doc-3] RAG Evaluation (score=0.226): RAG systems should evaluate retrieval quality separately from answer quality. Useful retrieval metrics include hit rate, reciprocal rank, precision, and recall.",
+          "latency_ms": 1.67
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
     },
     {
       "question": "How many learners are in the database?",
       "expected_route": "sql",
       "actual_route": "sql",
+      "final_route": "sql",
       "route_correct": true,
       "expected_contains": [
         "6"
       ],
       "answer": "There are 6 learners in the database.",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "sql"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "sql_data_overlap": true,
+          "numeric_consistency": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "sql",
+          "task": "How many learners are in the database?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "sql",
+          "task": "How many learners are in the database?",
+          "result": "[{\"learner_count\":6}]",
+          "latency_ms": 3.11
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
     },
     {
       "question": "How many learners are in Bengaluru?",
       "expected_route": "sql",
       "actual_route": "sql",
+      "final_route": "sql",
       "route_correct": true,
       "expected_contains": [
         "3"
       ],
       "answer": "There are 3 learners in Bengaluru.",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "sql"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "sql_data_overlap": true,
+          "numeric_consistency": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "sql",
+          "task": "How many learners are in Bengaluru?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "sql",
+          "task": "How many learners are in Bengaluru?",
+          "result": "[{\"learner_count\":3}]",
+          "latency_ms": 2.2
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
     },
     {
       "question": "What is the average score?",
       "expected_route": "data",
       "actual_route": "data",
+      "final_route": "data",
       "route_correct": true,
       "expected_contains": [
         "87"
       ],
-      "answer": "Average score: 87.17",
+      "answer": "[DATA]\nAverage score: 87.17",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "data"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "sql_data_overlap": true,
+          "numeric_consistency": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "data",
+          "task": "What is the average score?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "data",
+          "task": "What is the average score?",
+          "result": "Average score: 87.17",
+          "latency_ms": 2.07
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
     },
     {
       "question": "What is 47 * 6 + 12?",
       "expected_route": "calculator",
       "actual_route": "calculator",
+      "final_route": "calculator",
       "route_correct": true,
       "expected_contains": [
         "294"
       ],
       "answer": "The answer is 294.0.",
       "task_success": true,
+      "multi_agent": false,
+      "agents": [
+        "calculator"
+      ],
       "validation": {
         "passed": true,
         "grounded": true,
+        "reason": "All applicable checks passed. Numerical consistency and lexical overlap are heuristics, not proof of truth.",
+        "checks": {
+          "calculator": true
+        },
         "evidence_count": 1,
         "tool_call_count": 1
       },
-      "steps": null,
-      "tool_log": []
+      "steps": [
+        {
+          "step": 1,
+          "agent": "calculator",
+          "task": "What is 47 * 6 + 12?"
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "calculator",
+          "task": "What is 47 * 6 + 12?",
+          "result": "294.0",
+          "latency_ms": 0.95
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 1 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": null,
+          "next_task": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "question": "What is the average score of learners in Bengaluru?",
+      "expected_route": "sql",
+      "actual_route": "sql",
+      "final_route": "data",
+      "route_correct": true,
+      "expected_contains": [
+        "Bengaluru",
+        "average",
+        "score"
+      ],
+      "answer": "There are 3 learners in Bengaluru. Their average score is 91.67. The learners are: Arjun (95), Niraj (92), Rahul (88).",
+      "task_success": true,
+      "multi_agent": true,
+      "agents": [
+        "sql",
+        "data"
+      ],
+      "validation": {
+        "passed": false,
+        "grounded": false,
+        "reason": "Failed checks: numeric_consistency",
+        "checks": {
+          "sql_data_overlap": true,
+          "numeric_consistency": false
+        },
+        "evidence_count": 2,
+        "tool_call_count": 2
+      },
+      "steps": [
+        {
+          "step": 1,
+          "agent": "sql",
+          "task": "Find the scores of learners located in Bengaluru."
+        },
+        {
+          "step": 2,
+          "agent": "data",
+          "task": "Calculate the average score of the Bengaluru learners."
+        }
+      ],
+      "tool_calls": [
+        {
+          "agent": "sql",
+          "task": "Find the scores of learners located in Bengaluru.",
+          "result": "[{\"name\":\"Arjun\",\"score\":95.0},{\"name\":\"Niraj\",\"score\":92.0},{\"name\":\"Rahul\",\"score\":88.0}]",
+          "latency_ms": 2.42
+        },
+        {
+          "agent": "data",
+          "task": "Calculate the average score of the Bengaluru learners.",
+          "result": "Bengaluru average score: 91.67",
+          "latency_ms": 1.92
+        }
+      ],
+      "supervisor_decisions": [
+        {
+          "decision": "finish",
+          "reason": "Completed 2 specialist step(s). The planned workflow has collected the required evidence.",
+          "next_agent": "data",
+          "next_task": "Calculate the average score of the Bengaluru learners."
+        }
+      ],
+      "error": null
     }
   ]
 }
