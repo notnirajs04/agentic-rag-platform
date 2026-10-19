@@ -188,3 +188,16 @@ The task evaluation measures routing and task completion against the configured 
 This project demonstrates the design of an Agentic AI application that combines retrieval, specialized tools, structured data access, stateful orchestration, validation, evaluation, and API delivery.
 
 It is intended to demonstrate skills relevant to **AI Engineering, Agentic AI, LLM applications, RAG systems, and backend AI development**.
+## Screenshots
+
+### NEXUS AI Agent Workspace
+![Dashboard](screenshots/dashboard.png)
+
+### RAG Query
+![RAG Query](screenshots/rag-query.png)
+
+### SQL Query
+![SQL Query](screenshots/sql-query.png)
+
+### Calculator
+![Calculator](screenshots/calculator-query.png)
